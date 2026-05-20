@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anie Delgado — LOVERGRLL | Press Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:    #000000;
+    --near-black: #0a0a0a;
+    --white:    #f0ebe3;
+    --cream:    #e8dfd4;
+    --teal:     #3dd6e0;
+    --teal-dim: rgba(61,214,224,0.12);
+    --orange:   #b8784a;
+    --orange-dim: rgba(184,120,74,0.1);
+    --gray:     #6a6a6a;
+    --border:   rgba(255,255,255,0.07);
+    --border-teal: rgba(61,214,224,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── FILM GRAIN ── */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px 128px;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 52px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, transparent 100%);
+  }
+
+  .nav-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--teal);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(240,235,227,0.45);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  /* ── EMBARGO ── */
+  .embargo {
+    background: #0e0e0e;
+    border-bottom: 1px solid rgba(184,120,74,0.25);
+    text-align: center;
+    padding: 11px 48px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-cover {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/cover.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    transform: scale(1.04);
+    transition: transform 8s ease-out;
+  }
+
+  .hero-cover.loaded { transform: scale(1); }
+
+  .hero-vignette {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0.5) 100%),
+      linear-gradient(to right, rgba(0,0,0,0.3), transparent 40%, transparent 60%, rgba(0,0,0,0.3));
+  }
+
+  .hero-teal-glow {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60%;
+    background: radial-gradient(ellipse 80% 60% at 20% 100%, rgba(61,214,224,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 52px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(72px, 14vw, 170px);
+    font-weight: 900;
+    font-style: italic;
+    line-height: 0.88;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .hero-title span {
+    color: #e83e18;
+  }
+
+  .hero-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(240,235,227,0.55);
+    letter-spacing: 0.06em;
+    margin-bottom: 32px;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .hero-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-teal);
+    padding: 9px 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    text-transform: uppercase;
+  }
+
+  .pulse {
+    width: 6px; height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(0.7); }
+  }
+
+  .hero-ctas { display: flex; gap: 14px; }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: white;
+    padding: 13px 28px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(240,235,227,0.25);
+    color: var(--white);
+    padding: 13px 28px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+  /* ── SHARED LAYOUT ── */
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 100px 52px;
+  }
+
+  .wrap-narrow {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 100px 52px;
+  }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4.5vw, 50px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 36px;
+  }
+
+  /* ── LISTEN ── */
+  .listen-wrap {
+    background: var(--near-black);
+    border-top: 1px solid var(--border-teal);
+    border-bottom: 1px solid var(--border-teal);
+    padding: 80px 52px;
+    text-align: center;
+  }
+
+  .listen-player {
+    border: 1px dashed rgba(61,214,224,0.25);
+    max-width: 580px;
+    margin: 40px auto 28px;
+    padding: 56px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .listen-player::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(61,214,224,0.05), transparent);
+    pointer-events: none;
+  }
+
+  .play-btn {
+    width: 80px; height: 80px;
+    border: 1.5px solid var(--orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    position: relative;
+  }
+  .play-btn:hover { background: var(--orange-dim); transform: scale(1.06); }
+  .play-btn::after {
+    content: '';
+    border-left: 24px solid var(--orange);
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    margin-left: 5px;
+  }
+
+  .listen-track-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    text-transform: uppercase;
+  }
+
+  .listen-note {
+    font-size: 12px;
+    color: var(--gray);
+    font-style: italic;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* ── PRESS RELEASE ── */
+  .pr-wrap {
+    border-left: 2px solid var(--orange);
+    padding: 48px 48px 48px 52px;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .pr-meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    line-height: 2;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pr-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .pr-subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: rgba(240,235,227,0.55);
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+
+  .pr-body p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(240,235,227,0.8);
+    margin-bottom: 22px;
+  }
+
+  .pr-body p:first-child::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8em;
+    font-weight: 900;
+    float: left;
+    line-height: 0.72;
+    margin: 6px 10px 0 0;
+    color: var(--orange);
+  }
+
+  .pr-pullquote {
+    border-left: 2px solid var(--teal);
+    padding: 16px 28px;
+    margin: 32px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--white);
+    line-height: 1.65;
+    background: var(--teal-dim);
+  }
+
+  .pr-footer {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.8;
+  }
+  .pr-footer strong { color: var(--white); }
+
+  /* ── BIO ── */
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .bio-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: saturate(0.85) contrast(1.08);
+  }
+
+  .bio-img-caption {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: var(--gray);
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .bio-text p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(240,235,227,0.8);
+    margin-bottom: 20px;
+  }
+
+  .bio-credits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+  }
+
+  .credit-pill {
+    border: 1px solid var(--border-teal);
+    padding: 5px 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--teal);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── SONG INFO ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .info-card {
+    background: var(--near-black);
+    border: 1px solid var(--border);
+    padding: 36px;
+  }
+
+  .info-card-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 13px;
+  }
+  .info-row:last-child { border-bottom: none; }
+
+  .info-key { color: var(--gray); font-size: 12px; flex-shrink: 0; }
+  .info-val { color: var(--white); text-align: right; }
+
+  .tag-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+
+  .tag {
+    background: var(--orange-dim);
+    border: 1px solid rgba(232,80,26,0.35);
+    padding: 3px 10px;
+    font-size: 10px;
+    color: #c08060;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── PHOTOS ── */
+  .photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 44px;
+  }
+
+  .photo-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .photo-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: saturate(0.8) contrast(1.1);
+    transition: transform 0.6s ease, filter 0.4s ease;
+  }
+
+  .photo-card:hover img {
+    transform: scale(1.04);
+    filter: saturate(0.95) contrast(1.05);
+  }
+
+  .photo-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 40px 16px 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .photo-card:hover .photo-overlay { opacity: 1; }
+
+  .photo-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+  }
+
+  .dl-btn {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: var(--teal);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(61,214,224,0.4);
+    padding: 4px 10px;
+    transition: background 0.2s;
+  }
+  .dl-btn:hover { background: var(--teal-dim); }
+
+  .photos-note {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--gray);
+    font-style: italic;
+  }
+
+  /* ── STATS ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .stat-card {
+    background: var(--near-black);
+    border: 1px solid var(--border);
+    padding: 36px 28px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .stat-card:hover { border-color: var(--border-teal); background: rgba(61,214,224,0.04); }
+
+  .stat-icon { font-size: 22px; margin-bottom: 14px; display: block; }
+  .stat-platform {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 16px;
+    display: block;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    color: var(--teal);
+  }
+  .stat-label { font-size: 12px; color: var(--gray); display: block; }
+
+  /* ── LYRICS ── */
+  .lyrics-scroll {
+    background: var(--near-black);
+    border: 1px solid var(--border);
+    padding: 48px;
+    max-height: 440px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange) transparent;
+  }
+  .lyrics-scroll::-webkit-scrollbar { width: 3px; }
+  .lyrics-scroll::-webkit-scrollbar-thumb { background: var(--orange); }
+
+  .lyrics-stanza { margin-bottom: 32px; }
+
+  .lyrics-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .lyrics-stanza p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(240,235,227,0.75);
+  }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .contact-card {
+    background: var(--near-black);
+    border: 1px solid var(--border);
+    padding: 36px;
+  }
+
+  .contact-role {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .contact-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .contact-info { font-size: 13px; color: var(--gray); line-height: 1.9; }
+  .contact-info a { color: var(--orange); text-decoration: none; }
+  .contact-info a:hover { text-decoration: underline; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 48px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--teal);
+    margin-bottom: 10px;
+  }
+
+  footer p {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+    text-transform: uppercase;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 800px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .wrap, .wrap-narrow { padding: 64px 24px; }
+    .hero-content { padding: 0 24px 52px; }
+    .bio-grid { grid-template-columns: 1fr; gap: 36px; }
+    .info-grid, .contact-grid { grid-template-columns: 1fr; gap: 2px; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .photos-grid { grid-template-columns: repeat(2, 1fr); }
+    .pr-wrap { padding: 36px 24px; }
+    .lyrics-scroll { padding: 32px 24px; }
+    .embargo { padding: 11px 24px; font-size: 9px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Embargo -->
+<div class="embargo">★ &nbsp; Embargoed Until June 18, 2026 — For Press Use Only &nbsp; ★</div>
+
+<!-- Nav -->
+<nav>
+  <a href="#" class="nav-logo">Anie Delgado</a>
+  <ul class="nav-links">
+    <li><a href="#listen">Listen</a></li>
+    <li><a href="#release">Press Release</a></li>
+    <li><a href="#bio">Bio</a></li>
+    <li><a href="#photos">Photos</a></li>
+    <li><a href="#connect">Stats</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-cover" id="heroCover"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-teal-glow"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">New Single &nbsp;·&nbsp; June 18, 2026</p>
+    <h1 class="hero-title"><span>LOVERGRLL</span></h1>
+    <p class="hero-sub">Anie Delgado</p>
+    <div class="hero-meta">
+      <div class="hero-date">
+        <span class="pulse"></span>
+        Releasing June 18, 2026
+      </div>
+      <div class="hero-ctas">
+        <a href="#listen" class="btn-primary">▶ &nbsp;Preview Track</a>
+        <a href="#release" class="btn-ghost">Press Release</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── LISTEN ── -->
+<div id="listen" class="listen-wrap">
+  <span class="eyebrow" style="display:block; margin-bottom:12px;">Exclusive Preview</span>
+  <h2 style="font-family:'Playfair Display',serif; font-size:clamp(28px,4vw,44px); font-weight:700; margin-bottom:8px;">Hear the Track</h2>
+  <p style="color:var(--gray); font-size:14px;">For press & media — embargoed until June 18, 2026</p>
+  <div class="listen-player">
+    <a href="https://www.dropbox.com/scl/fi/kipg4gvwzt4gkrhnqg4q5/Anie-Delgado-LOVERGRLL-MASTER.wav?rlkey=lq7hj7rkctf3ox2jyd21iiw5e&st=ewbedx8w&dl=0" target="_blank" rel="noopener" style="text-decoration:none;">
+      <div class="play-btn"></div>
+    </a>
+    <p class="listen-track-name">LOVERGRLL — Anie Delgado</p>
+    <p style="font-size:12px; color:var(--gray); font-style:italic;">Click to stream — for press use only, embargoed until June 18, 2026</p>
+  </div>
+  <p class="listen-note">For a hi-res WAV download or alternative format, contact Ayo Adepoju at <a href="mailto:ayodele@wepluggoodmusic.com" style="color:var(--teal); text-decoration:none;">ayodele@wepluggoodmusic.com</a></p>
+</div>
+
+<!-- ── PRESS RELEASE ── -->
+<div class="wrap-narrow" id="release">
+  <span class="eyebrow">Press Release</span>
+  <div class="pr-wrap">
+    <div class="pr-meta">
+      FOR IMMEDIATE RELEASE — EMBARGOED UNTIL JUNE 18, 2026<br>
+      MEDIA CONTACT: Ayo Adepoju, We Plug Good Music &nbsp;·&nbsp; ayodele@wepluggoodmusic.com
+    </div>
+    <h2 class="pr-headline">Anie Delgado Reclaims Her Autonomy on Electric New Single "LOVERGRLL," Out June 18</h2>
+    <p class="pr-subhead">The Cuban-American pop artist delivers her boldest statement yet — a pulsing dance-pop anthem about desire, limits, and refusing to be someone else's fantasy</p>
+    <div class="pr-body">
+      <p>Miami-born, Los Angeles-based singer-songwriter Anie Delgado announces her new single "LOVERGRLL," out June 18, 2026. The track marks a pivotal creative turn for the Cuban-American artist — rawer, more defiant, and more sonically charged than anything she has released to date.</p>
+      <p>Produced with a buzzing, euphoric urgency, "LOVERGRLL" is energetic dance-pop with a dual personality: driving synths and a fierce, cutting verse delivery pull against an ethereal, almost hypnotic vocal hook. The result is a song that feels simultaneously euphoric and confrontational — an irresistible tension that mirrors the story at its heart.</p>
+      <div class="pr-pullquote">
+        "This song is about being a recovering people pleaser — someone who gives so much warmth that others mistake it for an open invitation. I'm done apologizing for having limits."<br><br>
+        — Anie Delgado
+      </div>
+      <p>The song was born from a real experience: after reaching out to a producer she deeply admired with entirely professional intentions, Delgado was met with hostility when she declined his advances. That moment crystallized something she had been living with for years — the way women's friendliness is routinely sexualized, and the exhausting labor of managing other people's projections while simply trying to exist and connect.</p>
+      <p>Lyrically, "LOVERGRLL" is seductive and unapologetic. Delgado inhabits the character she is accused of being — magnetic, intoxicating, inescapable — but entirely on her own terms. It is, in her own words, the "messier, more chaotic, cuntier version" of Taylor Swift's "Mirror Ball" — quiet reflection replaced with something electric and uncompromising.</p>
+      <p>Anie Delgado has built her following through a body of work defined by social clarity and emotional intelligence. Her single "Dancing While the World is on Fire" raised funds for climate non-profit Zero Hour and earned a placement in <em>Billboard</em>. "Galaxy" accumulated over 100,000 streams; "Stranger from the Internet" was licensed to CBS's <em>The Young and the Restless</em>. A new EP is in development.</p>
+      <p>"LOVERGRLL" is available everywhere on June 18, 2026. Press assets, high-resolution photography, and a private preview link are available upon request.</p>
+    </div>
+    <div class="pr-footer">
+      <strong>###</strong><br>
+      For press inquiries, interview requests, or a private listening link, contact:<br>
+      Ayo Adepoju, We Plug Good Music · <a href="mailto:ayodele@wepluggoodmusic.com" style="color:var(--teal);">ayodele@wepluggoodmusic.com</a>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ── SONG INFO ── -->
+<div class="wrap" id="info">
+  <span class="eyebrow">Track Details</span>
+  <h2 class="section-title">About the Song</h2>
+  <div class="info-grid">
+    <div class="info-card">
+      <p class="info-card-title">Release Info</p>
+      <div class="info-row">
+        <span class="info-key">Title</span>
+        <span class="info-val">LOVERGRLL</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Artist</span>
+        <span class="info-val">Anie Delgado</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Release Date</span>
+        <span class="info-val">June 18, 2026</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Format</span>
+        <span class="info-val">Single</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Genre</span>
+        <span class="info-val">
+          <div class="tag-row">
+            <span class="tag">Dance-Pop</span>
+            <span class="tag">Alt-Pop</span>
+            <span class="tag">Electropop</span>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="info-card">
+      <p class="info-card-title">Sonic Profile</p>
+      <div class="info-row">
+        <span class="info-key">Energy</span>
+        <span class="info-val">High — Fierce / Euphoric</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Production</span>
+        <span class="info-val">Buzzing synths, ethereal hook, driving bass</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Sounds Like</span>
+        <span class="info-val">Charli XCX · Rina Sawayama · Lady Gaga</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Theme</span>
+        <span class="info-val">Autonomy, reclaiming narrative, the male gaze</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Reference</span>
+        <span class="info-val">Taylor Swift's "Mirror Ball" — but fiercer</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ── BIO ── -->
+<div class="wrap" id="bio">
+  <div class="bio-grid">
+    <div>
+      <img src="images/press-5.jpg" alt="Anie Delgado press photo" class="bio-img">
+      <p class="bio-img-caption">Photo: Whitney Otte — Free for editorial use</p>
+    </div>
+    <div>
+      <span class="eyebrow">Artist Bio</span>
+      <h2 class="section-title">Anie Delgado</h2>
+      <p>Anie Delgado is a Cuban-American artist and bilingual Alternative-Pop songwriter from Miami, Florida. Steeped in Cuban heritage through dominoes, late-night dancing, and the reverberating beats of the Florida Keys, Anie has a musical imprint that goes all the way back to her first guitar in fourth grade.</p>
+      <p>Throughout adolescence, writing songs became a way of documenting her life — inspired by Lorde, Taylor Swift, and Madonna. In 2018, she relocated to Los Angeles to pursue her full-time career as an artist.</p>
+      <p>Her single "Dancing While the World is on Fire" raised funds for climate non-profit Zero Hour and was featured in <em>Billboard</em>. Working with producers PJ Bianco (Fifth Harmony, Jonas Brothers) and Nicke Lee (Lil Nas X, Ariana Grande), Anie released "Galaxy" with over 100,000 streams, and earned a sync placement on CBS's <em>The Young and the Restless</em> with "Stranger from the Internet."</p>
+      <p>"99¢ Jesus" contends with removing those who don't value you — a thematic reversal of the male gaze. With an EP in development, Anie Delgado is a new female pop artist to watch.</p>
+      <div class="bio-credits">
+        <span class="credit-pill">Billboard Feature</span>
+        <span class="credit-pill">CBS — Young &amp; the Restless</span>
+        <span class="credit-pill">100K+ Streams</span>
+        <span class="credit-pill">Zero Hour</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ── LYRICS ── -->
+<div class="wrap-narrow" id="lyrics">
+  <span class="eyebrow">Lyrics</span>
+  <h2 class="section-title">LOVERGRLL</h2>
+  <div class="lyrics-scroll">
+    <div class="lyrics-stanza">
+      <p class="lyrics-label">Intro</p>
+      <p>Yeah I'm your Lovergirl / Baby I'm your Lovergirl<br>
+      Lovers gonna run the world / Oh I'm your Lovergirl</p>
+    </div>
+    <div class="lyrics-stanza">
+      <p class="lyrics-label">Verse 1</p>
+      <p>You're living in my world / You want my shiny pearl<br>
+      You're trying to bag the girl — oh no oh no<br><br>
+      I know you got a crush / Psychedelic sugar rush<br>
+      You can look but you can't touch / Uh uh uh uh AH!</p>
+    </div>
+    <div class="lyrics-stanza">
+      <p class="lyrics-label">Pre-Chorus</p>
+      <p>I'm caught in the flashing lights / You're trapped in my gaze<br>
+      Can't get away now / Let's see if you're acting right<br><br>
+      I'm taking the lead — you better obey<br>
+      Let's see how you act tonight / Let's see how we act tonight<br>
+      Make me wanna come alive / You make me wanna come alive</p>
+    </div>
+    <div class="lyrics-stanza">
+      <p class="lyrics-label">Chorus</p>
+      <p>Oh, you're wanting me to be your Lovergirl<br>
+      Oh, you can't escape — you can't escape me</p>
+    </div>
+    <div class="lyrics-stanza">
+      <p class="lyrics-label">Verse 2</p>
+      <p>I can be your fixer / You drink me like elixir<br>
+      And once I'm in your system / Intoxicated, got you faded<br>
+      Know you like my aura / So you can bathe up in it<br>
+      But I'll teach you a lesson / A bitch has got her limits AH!</p>
+    </div>
+    <div class="lyrics-stanza">
+      <p class="lyrics-label">Bridge</p>
+      <p>I'm not fragile baby I'm your lover girl<br>
+      Take the challenge let me be your lover girl<br>
+      Make your head spin 'round 'cause I'm your lover girl<br>
+      It's too late now I'm your only lover girl</p>
+    </div>
+    <div class="lyrics-stanza">
+      <p class="lyrics-label">Outro</p>
+      <p>Yeah I'm your Lovergirl / Baby I'm your Lovergirl<br>
+      Lovers gonna run the world / Oh I'm your Lovergirl</p>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ── PRESS PHOTOS ── -->
+<div class="wrap" id="photos">
+  <span class="eyebrow">Press Photos</span>
+  <h2 class="section-title">Media Assets</h2>
+  <p style="color:var(--gray); font-size:14px; margin-top:-20px;">High-resolution images cleared for editorial use. Credit: Anie Delgado / Whitney Otte</p>
+  <div class="photos-grid">
+    <div class="photo-card">
+      <img src="images/press-1.jpg" alt="Anie Delgado press photo 01">
+      <div class="photo-overlay">
+        <span class="photo-num">01 · Hi-Res</span>
+        <a href="images/press-1.jpg" download class="dl-btn">↓ Download</a>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="images/press-2.jpg" alt="Anie Delgado press photo 02">
+      <div class="photo-overlay">
+        <span class="photo-num">02 · Hi-Res</span>
+        <a href="images/press-2.jpg" download class="dl-btn">↓ Download</a>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="images/press-3.jpg" alt="Anie Delgado press photo 03">
+      <div class="photo-overlay">
+        <span class="photo-num">03 · Hi-Res</span>
+        <a href="images/press-3.jpg" download class="dl-btn">↓ Download</a>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="images/press-4.jpg" alt="Anie Delgado press photo 04">
+      <div class="photo-overlay">
+        <span class="photo-num">04 · Hi-Res</span>
+        <a href="images/press-4.jpg" download class="dl-btn">↓ Download</a>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="images/press-5.jpg" alt="Anie Delgado press photo 05">
+      <div class="photo-overlay">
+        <span class="photo-num">05 · Hi-Res</span>
+        <a href="images/press-5.jpg" download class="dl-btn">↓ Download</a>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="images/cover.jpg" alt="LOVERGRLL single cover art">
+      <div class="photo-overlay">
+        <span class="photo-num">Cover Art · 3000×3000</span>
+        <a href="images/cover.jpg" download class="dl-btn">↓ Download</a>
+      </div>
+    </div>
+  </div>
+  <p class="photos-note">Need additional assets or a full hi-res zip? Contact press below.</p>
+</div>
+
+<hr class="rule">
+
+<!-- ── SOCIAL STATS ── -->
+<div class="wrap" id="connect">
+  <span class="eyebrow">Connect</span>
+  <h2 class="section-title">Find Anie Online</h2>
+  <div class="stats-grid">
+    <a class="stat-card" href="https://instagram.com/anie_delgado" target="_blank" rel="noopener">
+      <span class="stat-icon">📸</span>
+      <span class="stat-platform">Instagram</span>
+      <span class="stat-num">65.6K</span>
+      <span class="stat-label">Followers · @anie_delgado</span>
+    </a>
+    <a class="stat-card" href="https://tiktok.com/@anie_delgado" target="_blank" rel="noopener">
+      <span class="stat-icon">🎵</span>
+      <span class="stat-platform">TikTok</span>
+      <span class="stat-num">5.3K</span>
+      <span class="stat-label">Followers · @anie_delgado</span>
+    </a>
+    <a class="stat-card" href="https://open.spotify.com/artist/3aCMNzjzFFuuuHB0j2OD9m" target="_blank" rel="noopener">
+      <span class="stat-icon">🎧</span>
+      <span class="stat-platform">Spotify</span>
+      <span class="stat-num">10K</span>
+      <span class="stat-label">Monthly Listeners</span>
+    </a>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- ── CONTACT ── -->
+<div class="wrap" id="contact">
+  <span class="eyebrow">For Press & Media</span>
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <span class="contact-role">Press Inquiries</span>
+      <div class="contact-name">Ayo Adepoju</div>
+      <div class="contact-info">
+        We Plug Good Music<br>
+        <a href="mailto:ayodele@wepluggoodmusic.com">ayodele@wepluggoodmusic.com</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <span class="contact-role">Booking & Management</span>
+      <div class="contact-name">James Tucker</div>
+      <div class="contact-info">
+        <a href="mailto:aniedelgadomgmt@gmail.com">aniedelgadomgmt@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:28px; font-size:13px; color:var(--gray); font-style:italic;">
+    For sync licensing inquiries, please include project details and timeline.
+    All materials embargoed until June 18, 2026.
+  </p>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-title">Anie Delgado — LOVERGRLL</div>
+  <p>© 2026 Anie Delgado · All Rights Reserved · Press Kit — Confidential</p>
+</footer>
+
+<script>
+  // Animate hero cover on load
+  const cover = document.getElementById('heroCover');
+  window.addEventListener('load', () => {
+    setTimeout(() => cover.classList.add('loaded'), 100);
+  });
+</script>
+
+</body>
+</html>
